@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+    <div style="color: black; background-color: khaki; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; height: 300px;">
+        <h2> Notas </h2>
+        <br>
+        <br>
+        Qual é a sua nota? <input id="ipt_nota" placeholder="Insira sua nota" autofocus>
+        <br>
+        <br>
+        <button onclick="verificar()">Avaliar aluno</button>
+    </div>
+</body>
+
+<script>
+    function verificar() {
+        var ax_nota = ipt_nota.value;
+
+        if (ax_nota >= 0 && ax_nota <= 10){
+            alert(" Nota válida! ")
+        } else {
+            alert("Onde já se viu nota menor que 0 e maior que 10?!")
+        }
+    }
+</script>
+
+</html>

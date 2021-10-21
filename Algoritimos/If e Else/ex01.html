@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01</title>
+</head>
+<body>
+    <div  style="background-color: crimson; font-family: Georgia, 'Times New Roman', Times, serif; color: white; text-align: center;">
+        <h2>Temperatura</h2>
+        <br>
+        Qual a temperatura atual? <input id="ipt_temp" placeholder="Temperatura" autofocus>
+        <br>
+        <br>
+        <button onclick="verificar()" style="background-color: black;color: yellow; border-radius: 15%;">Verificar temperatura</button>
+    </div>
+    <script>
+        function verificar() {
+            var ax_temp = ipt_temp.value;
+
+            if (ax_temp >=21 && ax_temp <= 24){
+                alert ("Temperatura confortável :D");
+            } else {
+                alert ("Temperatura desconfortável D:")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+<body>
+    <div style="background-color: rgb(92, 197, 205); font-family: 'Courier New', Courier, monospace; color: white; text-align: center;">
+        <h1>Que horas são?</h1>
+        <img src="http://assets.stickpng.com/images/5c80f47672f5d9028c17ecfc.png" alt="Finn" style="width:100px; height: inherit;">
+        <img src="https://i.pinimg.com/originals/de/64/c9/de64c999f00c57beccdaa5e70577eeef.png" alt="jake" style="width:100px; height: inherit;">
+        <br>
+        <br>
+        <button onclick="sortear()"><img src="http://assets.stickpng.com/images/5c80f25772f5d9028c17ecd6.png" alt="BMO" style="width:50px; height: inherit;"></button>
+        <br>
+        <div id="div_result"></div>
+    </div>
+
+    <script>
+        function sortear() {
+        var ax_hora = Math.random();
+        
+        if (ax_hora >= 0 && ax_hora <= 11) {
+               div_result.innerHTML += `Bom dia, flor do dia, são ${ax_hora}! <br>`;
+
+           }  else if(ax_hora >= 12 && ax_hora <= 17) {
+               div_result.innerHTML += `Boa tarde, já vai tarde! São ${ax_hora}!`;
+
+           } else if(ax_hora >= 18 && ax_hora <= 23) {
+               div_result.innerHTML += `Boa noite, durma bem! São ${ax_hora}!`;
+           }
+        }
+    </script>
+</body>
+</html>

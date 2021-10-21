@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02</title>
+</head>
+<body>
+    <div style="color: white; background-color: rgb(121, 179, 36); font-family: monospace; text-align: center;">
+        <h2>Auxilio do Covid-19</h2>
+        <br>
+        <br>
+        Qual a sua renda? <input id="ipt_renda1" placeholder="Insira sua renda e valor bruto" autofocus>
+        <br>
+        <br>
+        Qual a renda total da sua familia? <input id="ipt_renda2" placeholder="Insira a renda total da sua familia" autofocus>
+        <br>
+        <br>
+        <button onclick="verificar()" style="color: red; background-color: yellow;">Verificar ajuda</button>
+    </div>
+</body>
+    <script>
+        function verificar() {
+            var ax_renda01 = ipt_renda1.value;
+            var ax_renda02 = ipt_renda2.value;
+
+            if (ax_renda01 < 1050 && ax_renda02 < 2100){
+                alert("Você terá direito!");
+            } else {
+                alert("Você não terá direito!");
+            }
+        }
+    </script>
+</html>

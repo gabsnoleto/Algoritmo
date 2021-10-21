@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style= "color: white; background-color: red; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; text-align: center; height: 250px;">
+        <h2>Le Garçon</h2>
+        O melhor restaurante do mundo!
+        <br>
+        <br>
+        Nossas opções para o café da manhã são: <select id="sel_cafe">
+            <option value="01">Ovos</option>
+            <option value="02">Leite de arroz</option>
+            <option value="03">Bacon</option>
+        </select>
+        <br>
+        <br>
+        Nossas opções para o almoço são: <select id="sel_almoco">
+            <option value="04">Bife</option>
+            <option value="05">Hamburguer de soja</option>
+            <option value="06">Frango grelhado</option>
+        </select>
+        <br>
+        <br>
+        Nossas opções para a janta são: <select id="sel_jantar">
+            <option value="07">Picanha de soja</option>
+            <option value="08">Cupim</option>
+            <option value="09">Coração</option>
+        </select>
+            <br>
+            <br>
+            <button onclick="vegan()"> Sou vegano! </button>
+    </div>
+</body>
+
+<script>
+    function vegan() {
+        var cafe = Number(sel_cafe.value);
+        var almoço = Number(sel_almoco.value);
+        var janta = Number(sel_jantar.value);
+      
+
+        if ( cafe == 02 &&  almoço == 05 && janta == 07 ) {
+            alert("Sim, você é vegano!");
+    } else {
+        alert("Não, você não é vegano!");
+    }
+}
+</script>
+
+</html>

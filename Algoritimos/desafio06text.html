@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 06</title>
+</head>
+<body>
+    <div style="background-color: crimson; text-align:center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <h2 style="color: beige;"> Digite sua senha</h2>
+    <br>
+    <input type="text" id="ipt_senha" placeholder="digite aqui" onkeyup="analisar()" autofocus>
+    <br>
+    <br>
+    <br>
+</div>
+<div id="div_result"></div>
+
+<script>
+    function analisar() {
+        var ax_senha = ipt_senha.value;
+
+        div_result.innerHTML = ` `;
+       
+        div_result.innerHTML += `Quantos caracteres? ${ax_senha.length} <br>`;
+        
+
+        div_result.innerHTML += `Ela começa com "e"? ${ax_senha.startsWith('e')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "a"? ${ax_senha.startsWith('a')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "e" ou "E"? ${ax_senha.startsWith('e')||ax_senha.startsWith('E')} <br>`;
+
+        div_result.innerHTML += `Se ela começa com "e" ou "E" Mude para 3 ${ax_senha.startsWith('e')||ax_senha.startsWith('E')} <br>`;
+
+        div_result.innerHTML += `Ela começa com "a" ou "A"? ${ax_senha.startsWith('a')||ax_senha.startsWith('A')} <br>`;
+ 
+        div_result.innerHTML += `Qual é a primeira letra? ${ax_senha[0]} <br>`;
+
+        div_result.innerHTML += `Qual é a última letra? ${ax_senha[ax_senha.length-1]} <br>`;
+
+        div_result.innerHTML += `Como fica em maiusculo ${ax_senha.toUpperCase()} <br>`;
+
+        div_result.innerHTML += `Como fica em minusculo ${ax_senha.toLowerCase()} <br>`;
+
+        div_result.innerHTML += `Frase Original ${ax_senha} <br>`;
+    
+
+    }
+</script>
+
+</body>
+</html>
