@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body style="background-color: rgb(251, 255, 0); color: rgb(0, 0, 0); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; width: 100vw; height: 100vh; text-align: center;">
+    <h2>Rotina de treinos</h2>
+    <p>De quantos em quantos dias você faz musculação?</p>
+    <br>
+    <input type="text" placeholder="de quanto em quantos dias" autofocus id="musc">
+    <br>
+    <br>
+    <button onclick="rotina()" style="background-color: rgb(0, 110, 255); color: white; border-radius: 15px;"> Exibir rotina mensal</button>
+    <div id="div_monstro" ></div>
+</body>
+</html>
+
+<script>
+    function rotina(){ 
+        var dia = musc.value;
+        var valor = 0;
+        div_monstro.innerHTML = " ";
+
+
+        while ( valor < 30) {
+
+            if(valor % dia == 0){
+        div_monstro.innerHTML +=  `<br> <b>Dia ${++valor} - <b> Musculação </b>`
+                
+            }else {
+                div_monstro.innerHTML +=  `<br>Dia ${++valor} - Comer, rezar e amar`
+            }
+       
+        }
+    }
+    
+</script>

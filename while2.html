@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body style="background-color: rgb(98, 140, 255); color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; width: 100vw; height: 100vh; text-align: center;">
+    <h2>A pessoa que eu mais amo é ...</h2>
+    <p>Digite aqui o nome</p>
+    <br>
+    <input type="text" placeholder="nome da pessoa" autofocus id="nome" style="width: 30vw;">
+    <br>
+    <br>
+    <input type="number" placeholder="a quantidade em nº inteiro" width="30vw;" id="quanto">
+    <br>
+    <br>
+    <button onclick="amor()" style="background-color: rgb(190, 6, 37); color: white; border-radius: 15px; width: 25vw;"> Expressar amor</button>
+    <div id="div_love" ></div>
+    
+</body>
+<script>
+    function amor() {
+        var ax_cont = 1;
+        var ax_nome = nome.value;
+        var ax_quanto = quanto.value;
+        div_love.innerHTML = "";
+
+        while  (ax_cont <= ax_quanto ){
+            div_love.innerHTML +=  `<br> ${ax_nome}, eu te amo! <i> Sempre lembre disso </i> <br>`;
+            ax_cont ++;
+                
+            }
+       
+        }
+    
+</script>
+</html>

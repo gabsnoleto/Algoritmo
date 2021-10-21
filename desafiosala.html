@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desafio</title>
+</head>
+<body style="color: white; background-color: darkblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+    <h1>Números da Sorte</h1>
+    <br>
+    Quais número você quer sortear?
+    <br>
+    <br>
+    <input type="text" placeholder="nº inteiros" autofocus id="ipt_qtde" oninput="sortear()" style="background: ivory; font-style:initial; color: black; border: radius 15px;">
+    <br>
+    <br>
+    
+    <div id="div_msg"></div>
+</body>
+
+<script>
+    function sortear() {
+        var ax_conta = 0;
+        var quant = ipt_qtde.value;
+        div_msg.innerHTML = '';
+
+        while (ax_conta < quant){
+            div_msg.innerHTML += `${(Math.random()*100).toFixed()}<br>`;
+            ax_conta++;
+        }
+        
+
+
+        
+    }
+</script>
+</html>

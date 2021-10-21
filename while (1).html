@@ -1,0 +1,62 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+<body style="background-color: rgb(161, 69, 248); color: white; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; width: 100vw; height: 100vh; text-align: center;">
+    <h2>Números pares</h2>
+    <p>Digite seu número</p>
+    <br>
+    <input type="text" placeholder="nº par - inicio" autofocus id="num2">
+    <br>
+    <br>
+    <input type="text" placeholder="nº par - fim" id="num3">
+    <br>
+    <br>
+    <button onclick="ordenar()" style="background-color: rgb(255, 0, 128); color: white; border-radius: 15px;"> Veja aqui</button>
+    <div id="numero" ></div>
+</body>
+</html>
+
+<script>
+    function ordenar() {
+        var start = num2.value;
+        var end = num3.value;
+        var contador = start - 1;
+
+        while (contador < end) {
+            contador ++;
+            var ax_cont = contador % 2;
+            if (ax_cont  == 0) {
+        numero.innerHTML +=  `<br> Número par ${contador} <br>`;
+                
+            }
+       
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

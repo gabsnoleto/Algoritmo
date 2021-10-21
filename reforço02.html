@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa 01</title>
+</head>
+<body>
+    <div id="estilo" style="background-color: darkmagenta; color: white; text-align: center; font-family: 'Segoe UI'; width: 500px;">
+    <h2> Notas </h2>
+    Entre com o nome do aluno: <input id="iptnome"> 
+    <br>
+    Entre com a primeira nota:
+    <select name="nota01" id="notao01">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option> 
+    </select> 
+        <br> 
+        Entre com a segunda nota:
+        <select name="nota02" id="notao02">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br>
+        Entre com a terceira nota:
+        <select name="nota03" id="notao03">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <br>
+        <br>
+        <button onclick="calcular()" style="background-color: yellow;">Mágica</button>
+        <br>
+</div>
+
+<div id="alvo"></div>
+<button id="retorno" onclick="retur()" style="display: none;">Retornar</button>
+</body>
+<script>
+    function calcular(){
+        var axn1 = Number(notao01.value);
+        var axn2 = Number(notao02.value);
+        var axn3 = Number(notao03.value);
+        var axmedia = (axn1 + axn2 + axn3) / 3;
+     //alert ((Number(notao01.value) + Number(notao02.value) + Number(notao03.value)) / 3);
+        //alert ((axn1 + axn2 + axn3) / 3);
+        
+        alvo.innerHTML = `O aluno ${iptnome.value} teve a média ${axmedia}`;
+        
+        estilo.style.display = "none";
+        retorno.style.display = "block";
+    }
+    function retur(){
+        estilo.style.display = "block";
+        alvo.style.display = "none";
+        retorno.style.display = "none";
+    }
+</script>
+</html>
